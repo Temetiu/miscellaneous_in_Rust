@@ -36,6 +36,7 @@ fn main() {
         }
     }
     
+    // loop
     let mut counter = 0;
     let result = loop {
         counter += 1;
@@ -45,6 +46,22 @@ fn main() {
     };
     println!("result = {result}");
 
+    // loop in an array
+    let a = [1, 1, 2, 3, 5, 8];
+    let mut index = 0;
+
+    // while style
+    while index < a.len() {
+        println!("Value at index {index} is {}", a[index]);
+        index += 1;
+    }
+
+    // for each element style
+    index = 0;
+    for element in a {
+        println!("Value at index {index} is {element}");
+        index += 1;
+    }
 }
 
 fn my_function(x: i32) {
